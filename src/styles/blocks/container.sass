@@ -12,7 +12,7 @@
     transform: translate3d(-200px, 0, 0)
     transition: transform 0.2s ease-in-out
     padding: 20px
-    background-color: $light-bg-color
+    background: none
 
     .container.is-open &
       transform: translate3d(0px, 0, 0);
@@ -37,8 +37,14 @@
     width: 30%
     min-width: 320px
     box-sizing: border-box
-    padding: 40px
-    background-color: $light-bg-color
+    padding: 40px 20px
+    background: none
+
+    .sidebar
+      padding: 15px
+      padding-top: 0
+      background: rgba(1, 1, 1, 0.1)
+      border-radius: 8px
 
   .container__body
     flex: 1

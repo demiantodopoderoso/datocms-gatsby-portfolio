@@ -14,6 +14,11 @@ const TemplateWrapper = ({ children }) => (
         globalSeo {
           siteName
         }
+        theme {
+          logo {
+            url
+          }
+        }
         faviconMetaTags {
           ...GatsbyDatoCmsFaviconMetaTags
         }
@@ -48,7 +53,9 @@ const TemplateWrapper = ({ children }) => (
       <div className="container__sidebar">
         <div className="sidebar">
           <h6 className="sidebar__title">
-            <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
+            <Link to="/">
+              <img src={data.datoCmsSite.theme.logo.url} alt={data.datoCmsSite.globalSeo.siteName} />
+            </Link>
           </h6>
           <div
             className="sidebar__intro"
@@ -58,10 +65,19 @@ const TemplateWrapper = ({ children }) => (
           />
           <ul className="sidebar__menu">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/">Inicio</Link>
             </li>
             <li>
-              <Link to="/about">About</Link>
+              <Link to="/mobiliario-infantil">Mobiliario infantil</Link>
+            </li>
+            <li>
+              <Link to="/mobiliario-adulto">Mobiliario adulto</Link>
+            </li>
+            <li>
+              <Link to="/mascotas">Mascotas</Link>
+            </li>
+            <li>
+              <Link to="/about">Quiénes somos</Link>
             </li>
           </ul>
           <p className="sidebar__social">

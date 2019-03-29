@@ -1,5 +1,7 @@
 .sidebar__title
   margin-bottom: 20px
+  display: flex
+  justify-content: center
 
   a
     font-size: 18px
@@ -7,14 +9,13 @@
     font-weight: bold
     text-decoration: none
     color: $dark-body-color
-
-    &:hover
-      border-bottom: dotted 1px #9055a2
+    max-width: 80%
 
 .sidebar__intro
-  color: $light-body-color
+  color: $cream
   font-size: 14px
   margin-bottom: 20px
+  text-align: center
 
   p
     margin-bottom: 10px
@@ -30,7 +31,7 @@
       text-decoration: none
       display: block
       padding-left: 20px
-      color: $base-body-color
+      color: $elita-pink
       position: relative
 
       &:before
@@ -41,21 +42,24 @@
         margin-top: -6px
         height: 12px
         width: 12px
-        background: url('https://cdn.rawgit.com/encharm/Font-Awesome-SVG-PNG/master/black/svg/chevron-right.svg')
+        background: url('https://cdn.rawgit.com/encharm/Font-Awesome-SVG-PNG/master/white/svg/chevron-right.svg')
         background-position: 50% 50%
         background-repeat: no-repeat
         background-size: contain
         opacity: 0.6
 
       &:hover
-        color: $active-color
+        color: $cream
+        transition-duration: .3s
 
     &.is-active a
       font-weight: bold
       color: $active-color
 
 .sidebar__social
+  display: flex
   margin-bottom: 20px
+  justify-content: space-evenly
 
 .sidebar__copyright
   color: $light-body-color

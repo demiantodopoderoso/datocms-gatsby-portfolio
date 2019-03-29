@@ -9,8 +9,8 @@ const IndexPage = (props) => (
 export default IndexPage
 
 export const query = graphql`
-  query IndexQuery {
-    allDatoCmsWork(sort: { fields: [position], order: ASC }) {
+  query PetsQuery {
+    allDatoCmsWork(sort: { fields: [position], order: ASC }, filter: { categoryId: { eq: 2 } }) {
       edges {
         node {
           id
