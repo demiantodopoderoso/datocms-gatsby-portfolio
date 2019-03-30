@@ -112,19 +112,18 @@ const TemplateWrapper = ({ children }) => (
             {copyright}
           </div>
         </div>
+        {!isBrowser && (
+          <Menu
+            width='70%'
+            customBurgerIcon={FaBars()}
+            className='burger-menu'
+          >
+            {logo}
+            {menu}
+            {social}
+          </Menu>
+        )}
         <div className="container__body">
-          {!isBrowser && (
-            <Menu
-              customBurgerIcon={FaBars()}
-              overlayClassName='menu__overlay'
-              width='70%'
-              className='burger-menu'
-            >
-              {logo}
-              {menu}
-              {social}
-            </Menu>
-          )}
           <div className="container__mobile-header">
             <div className="mobile-header">
               <div className="mobile-header__logo">
