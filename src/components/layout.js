@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 import { StaticQuery, graphql } from "gatsby"
 import { HelmetDatoCms } from 'gatsby-source-datocms'
 import { slide as Menu } from 'react-burger-menu'
-import { isBrowser } from 'react-device-detect'
 import { FaBars } from 'react-icons/fa'
 
 import '../styles/index.sass'
@@ -112,17 +111,15 @@ const TemplateWrapper = ({ children }) => (
             {copyright}
           </div>
         </div>
-        {!isBrowser && (
-          <Menu
-            width='70%'
-            customBurgerIcon={FaBars()}
-            className='burger-menu'
-          >
-            {logo}
-            {menu}
-            {social}
-          </Menu>
-        )}
+        <Menu
+          width='70%'
+          customBurgerIcon={FaBars()}
+          className='burger-menu'
+        >
+          {logo}
+          {menu}
+          {social}
+        </Menu>
         <div className="container__body">
           <div className="container__mobile-header">
             <div className="mobile-header">

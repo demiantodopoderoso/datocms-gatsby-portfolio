@@ -15,7 +15,6 @@
     "node-sass": "^4.9.3",
     "react": "^16.5.2",
     "react-burger-menu": "^2.6.5",
-    "react-device-detect": "^1.6.2",
     "react-dom": "^16.5.2",
     "react-helmet": "^5.2.0",
     "react-icons": "^3.5.0",
