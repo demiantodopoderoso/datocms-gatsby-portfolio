@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import Masonry from 'react-masonry-component'
 import Img from 'gatsby-image'
-import Layout from "../components/layout"
+import Layout from './layout'
 
 const ShowCase = ({ data }) => (
   <Layout>

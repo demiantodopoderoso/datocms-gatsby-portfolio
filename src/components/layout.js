@@ -6,7 +6,6 @@ import { HelmetDatoCms } from 'gatsby-source-datocms'
 import { slide as Menu } from 'react-burger-menu'
 import { FaBars } from 'react-icons/fa'
 import Modal from 'react-responsive-modal'
-import PageTransition from 'gatsby-plugin-page-transitions'
 
 import '../styles/index.sass'
 
@@ -165,44 +164,41 @@ class TemplateWrapper extends Component {
             <div className="sidebar__copyright">{data.datoCmsHome.copyright}</div>
           )
           return (
-            <PageTransition>
-
-              <div className="container">
-                <HelmetDatoCms
-                  favicon={data.datoCmsSite.faviconMetaTags}
-                  seo={data.datoCmsHome.seoMetaTags}
-                />
-                {this.renderModal(data)}
-                <div className="container__sidebar">
-                  <div className="sidebar">
-                    {logo}
-                    {intro}
-                    {menu}
-                    {social}
-                    {copyright}
-                  </div>
-                </div>
-                <Menu
-                  width='70%'
-                  customBurgerIcon={FaBars()}
-                  className='burger-menu'
-                >
+            <div className="container">
+              <HelmetDatoCms
+                favicon={data.datoCmsSite.faviconMetaTags}
+                seo={data.datoCmsHome.seoMetaTags}
+              />
+              {this.renderModal(data)}
+              <div className="container__sidebar">
+                <div className="sidebar">
                   {logo}
+                  {intro}
                   {menu}
                   {social}
-                </Menu>
-                <div className="container__body">
-                  <div className="container__mobile-header">
-                    <div className="mobile-header">
-                      <div className="mobile-header__logo">
-                        <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
-                      </div>
-                    </div>
-                  </div>
-                  {children}
+                  {copyright}
                 </div>
               </div>
-            </PageTransition>
+              <Menu
+                width='70%'
+                customBurgerIcon={FaBars()}
+                className='burger-menu'
+              >
+                {logo}
+                {menu}
+                {social}
+              </Menu>
+              <div className="container__body">
+                <div className="container__mobile-header">
+                  <div className="mobile-header">
+                    <div className="mobile-header__logo">
+                      <Link to="/">{data.datoCmsSite.globalSeo.siteName}</Link>
+                    </div>
+                  </div>
+                </div>
+                {children}
+              </div>
+            </div>
           )
       }}
     />
