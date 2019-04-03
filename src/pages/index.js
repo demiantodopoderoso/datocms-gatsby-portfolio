@@ -1,9 +1,20 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import Layout from '../components/layout'
 import ShowCase from '../components/showcase'
 
 const IndexPage = (props) => (
-  <ShowCase {...props} />
+  <Layout>
+    <div className="mobile-intro">
+      <div
+        className="sidebar__intro"
+        dangerouslySetInnerHTML={{
+          __html: props.data.datoCmsHome.introTextNode.childMarkdownRemark.html,
+        }}
+      />
+    </div>
+    <ShowCase {...props} />
+  </Layout>
 )
 
 export default IndexPage
@@ -22,6 +33,13 @@ export const query = graphql`
               ...GatsbyDatoCmsSizes
             }
           }
+        }
+      }
+    }
+    datoCmsHome {
+      introTextNode {
+        childMarkdownRemark {
+          html
         }
       }
     }

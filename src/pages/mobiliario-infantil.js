@@ -1,9 +1,12 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import ShowCase from '../components/showcase'
+import Layout from '../components/layout'
 
 const IndexPage = (props) => (
-  <ShowCase {...props} />
+  <Layout>
+    <ShowCase {...props} />
+  </Layout>
 )
 
 export default IndexPage
