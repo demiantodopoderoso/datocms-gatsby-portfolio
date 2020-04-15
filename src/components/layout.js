@@ -22,14 +22,14 @@ class TemplateWrapper extends Component {
   }
 
   componentDidMount() {
-    const visited = localStorage['la-tienda-de-elita-visited']
+    const visited = localStorage['la-tienda-de-elita-visited-40']
     let modalOpen = false
     if (!visited || visited === 'false') {
       modalOpen = true
-      localStorage['la-tienda-de-elita-visited'] = true
+      localStorage['la-tienda-de-elita-visited-40'] = true
     }
     this.setState({
-      modalOpen
+      modalOpen,
     })
   }
 
@@ -51,6 +51,10 @@ class TemplateWrapper extends Component {
             />
           </div>
           <h1 className="modal__title">¡Bienvenido/a a La Tienda de Elita!</h1>
+          <h4 className="modal__info_warning">
+            Debido a la cuarentena de algunas comunas,
+            estamos haciendo SOLO despachos a domicilio los días miércoles.
+          </h4>
           <h3 className="modal__subtitle">¿Qué quieres ver?</h3>
           <div className="modal__menu">
             <ul>
