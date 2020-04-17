@@ -53,7 +53,8 @@ class TemplateWrapper extends Component {
           <h1 className="modal__title">¡Bienvenido/a a La Tienda de Elita!</h1>
           <h4 className="modal__info_warning">
             Debido a la cuarentena de algunas comunas,
-            estamos haciendo SOLO despachos a domicilio los días miércoles.
+            solo estamos haciendo despachos a domicilio los días miércoles,
+            hemos suspendido la opción de retiro.
           </h4>
           <h3 className="modal__subtitle">¿Qué quieres ver?</h3>
           <div className="modal__menu">
