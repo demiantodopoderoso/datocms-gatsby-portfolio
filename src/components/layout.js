@@ -65,9 +65,6 @@ class TemplateWrapper extends Component {
               <li>
                 <Link to="/mobiliario-adulto">Mobiliario adulto</Link>
               </li>
-              <li>
-                <Link to="/mascotas">Mascotas</Link>
-              </li>
               <li className="see-more">
                 <Link to="/">Ver todo</Link>
               </li>
@@ -144,9 +141,6 @@ class TemplateWrapper extends Component {
             </li>
             <li>
               <Link to="/mobiliario-adulto">Mobiliario adulto</Link>
-            </li>
-            <li>
-              <Link to="/mascotas">Mascotas</Link>
             </li>
             <li>
               <Link to="/about">Quiénes somos</Link>
